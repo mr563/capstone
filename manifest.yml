@@ -1,0 +1,20 @@
+modules:
+  jira:issuePanel:
+    - key: devops-kpi-app-hello-world-issue-panel
+      resource: main
+      resolver:
+        function: resolver
+      render: native
+      title: DevOps-KPI-app
+      icon: https://developer.atlassian.com/platform/forge/images/icons/issue-panel-icon.svg
+  function:
+    - key: resolver
+      handler: index.handler
+resources:
+  - key: main
+    path: src/frontend/index.jsx
+app:
+  id: ari:cloud:ecosystem::app/b0469d68-1927-48ed-a2d4-d60682f583bd
+permissions:
+  scopes:
+    - read:jira-work
